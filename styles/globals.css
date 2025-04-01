@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-gray-900;
+}
+
+@keyframes backgroundBlur {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-backgroundBlur {
+  background-size: 200% 200%;
+  animation: backgroundBlur 12s ease infinite;
+}
