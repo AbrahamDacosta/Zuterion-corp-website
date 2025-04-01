@@ -8,13 +8,14 @@ export default function Navbar() {
 
   return (
     <header className="w-full h-16 px-6 shadow-sm bg-white sticky top-0 z-50 flex items-center">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <div className="max-w-7xl mx-auto flex justify-between items-center w-full">
         <Link href="/">
-          <Image src="/logo.png" alt="Zuterion Logo" width={140} height={40} className="h-auto w-auto" />
+          <Image src="/logo.png" alt="Zuterion Logo" width={140} height={40} className="h-10 w-auto object-contain" />
         </Link>
 
         {/* Desktop nav */}
         <nav className="space-x-6 hidden md:flex">
+          <Link href="/about" className="text-sm text-gray-700 hover:text-black">À propos</Link>
           <Link href="/services/tech" className="text-sm text-gray-700 hover:text-black">Services Tech</Link>
           <Link href="/services/marketing" className="text-sm text-gray-700 hover:text-black">Marketing Digital</Link>
           <Link href="/services/bonus" className="text-sm text-gray-700 hover:text-black">Bonus</Link>
@@ -30,6 +31,7 @@ export default function Navbar() {
       {/* Mobile nav */}
       {open && (
         <div className="md:hidden mt-4 space-y-4 px-4 pb-4">
+          <Link href="/about" className="block text-sm text-gray-700 hover:text-black">À propos</Link>
           <Link href="/services/tech" className="block text-sm text-gray-700 hover:text-black">Services Tech</Link>
           <Link href="/services/marketing" className="block text-sm text-gray-700 hover:text-black">Marketing Digital</Link>
           <Link href="/services/bonus" className="block text-sm text-gray-700 hover:text-black">Bonus</Link>
