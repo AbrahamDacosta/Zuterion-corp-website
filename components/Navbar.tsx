@@ -7,10 +7,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full h-16 px-6 shadow-sm bg-white sticky top-0 z-50 flex items-center">
+    <header className="w-full h-16 px-6 shadow-sm bg-white sticky top-0 z-96 flex items-center">
       <div className="max-w-7xl mx-auto flex justify-between items-center w-full">
         <Link href="/">
-          <Image src="/logo.png" alt="Zuterion Logo" width={140} height={40} className="h-10 w-auto object-contain" />
+          <Image src="/logo.png" alt="Zuterion Logo" width={200} height={100} className="h-10 w-auto object-contain" />
         </Link>
 
         {/* Desktop nav */}
