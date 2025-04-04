@@ -6,6 +6,7 @@ import React from 'react';
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
+    // WhatsApp Button (GetButton.io)
     const script = document.createElement("script");
     script.type = "text/javascript";
     script.innerHTML = `
@@ -25,6 +26,12 @@ export default function App({ Component, pageProps }: AppProps) {
       })();
     `;
     document.body.appendChild(script);
+
+    // Tidio Chatbot Script
+    const tidioScript = document.createElement("script");
+    tidioScript.src = "//code.tidio.co/qnzypp9povexuikpfdv9nongkr6nxl6c.js"; // Remplacez par votre identifiant Tidio
+    tidioScript.async = true;
+    document.body.appendChild(tidioScript);
   }, []);
 
   return (
