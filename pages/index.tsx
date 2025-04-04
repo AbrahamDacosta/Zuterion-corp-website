@@ -9,6 +9,7 @@ import Head from 'next/head';
 export default function Home() {
   return (
     <><Head>
+      <meta name="google-site-verification" content="DcWF_ZhBVHCxyXEpyNR2--9Te4tog10P_V4t2peVdoI" />
       <title>Zuterion Corp | Développement & Design Digital</title>
       <meta name="description" content="Agence digitale innovante spécialisée en développement Web, mobile, blockchain et design UX/UI. Basée en Côte d’Ivoire." />
 
