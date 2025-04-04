@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import React from 'react';
+import Head from 'next/head';
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -36,6 +37,20 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        {/* Google Analytics GA4 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQD2WCR8EF"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-NQD2WCR8EF');
+            `,
+          }}
+        />
+      </Head>
       <Navbar />
       <Component {...pageProps} />
     </>
