@@ -2,8 +2,28 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Send, CheckCircle } from "lucide-react";
 import emailjs from "emailjs-com";
+import Head from "next/head";
 
 export default function ContactPage() {
+    <><Head>
+        <title>Zuterion Corp | Contact</title>
+        <meta name="description" content="Agence digitale innovante spécialisée en développement Web, mobile, blockchain et design UX/UI. Basée en Côte d’Ivoire." />
+
+        {/* Open Graph pour réseaux sociaux */}
+        <meta property="og:title" content="Zuterion Corp | Développement & Design Digital" />
+        <meta property="og:description" content="Agence digitale innovante spécialisée en développement Web, mobile, blockchain et design UX/UI." />
+        <meta property="og:image" content="/og-zuterion.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zuterion-corp.onrender.com" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zuterion Corp | Développement & Design Digital" />
+        <meta name="twitter:description" content="Agence digitale innovante spécialisée en développement Web, mobile, blockchain et design UX/UI." />
+        <meta name="twitter:image" content="/og-zuterion.jpg" />
+    </Head><main className="min-h-screen bg-white text-black font-sans overflow-hidden"></main></>
+
+
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
