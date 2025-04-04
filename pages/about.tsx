@@ -15,7 +15,7 @@ const FaDownload = FaIcons.FaDownload as React.ComponentType;
 
 export default function AboutPage() {
   return (
-    <><Head>
+    <><><Head>
           <title>À propos | Zuterion Corp</title>
           <meta name="description" content="Découvrez le parcours du fondateur de Zuterion Corp, son engagement dans l'innovation digitale, et la mission de l'agence." />
 
@@ -91,6 +91,20 @@ export default function AboutPage() {
                       </div>
                   </motion.div>
               </div>
-          </main></>
+              
+          </main></><Head>
+              {/* Google Analytics GA4 */}
+              <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQD2WCR8EF"></script>
+              <script
+                  dangerouslySetInnerHTML={{
+                      __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NQD2WCR8EF');
+    `,
+                  }} />
+          </Head></>
   );
+  
 }
