@@ -54,6 +54,32 @@ export default function App({ Component, pageProps }: AppProps) {
           <link rel="apple-touch-icon" sizes="180x180" href="/favicons/favicon-180x180.png" />
           <link rel="manifest" href="/favicons/site.webmanifest" />
           <meta name="theme-color" content="#1472F9" />
+
+           {/* Rich Snippet - JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `{
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zuterion Corp",
+              "url": "https://zuterion-corp-website.onrender.com",
+              "logo": "https://zuterion-corp-website.onrender.com/favicons/favicon-512x512.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+2250787785170",
+                "contactType": "customer support",
+                "areaServed": "CI",
+                "availableLanguage": ["fr", "en"]
+              },
+              "sameAs": [
+                "https://www.linkedin.com/in/abrahamdacosta",
+                "https://twitter.com/abrahamdacosta",
+                "https://github.com/AbrahamDacosta"
+              ]
+            }`
+          }}
+        />
       </Head>
       <Navbar />
       <Component {...pageProps} />
