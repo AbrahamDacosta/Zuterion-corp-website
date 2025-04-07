@@ -50,6 +50,10 @@ export default function App({ Component, pageProps }: AppProps) {
             `,
           }}
         />
+         <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/favicons/favicon-180x180.png" />
+          <link rel="manifest" href="/favicons/site.webmanifest" />
+          <meta name="theme-color" content="#1472F9" />
       </Head>
       <Navbar />
       <Component {...pageProps} />
