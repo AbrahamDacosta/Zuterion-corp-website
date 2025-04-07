@@ -6,6 +6,7 @@ import { MoveRight ,Code2, LineChart, Puzzle} from 'lucide-react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import NewsletterForm from '../components/NewsletterForm';
+import Link from 'next/dist/client/link';
 
 
 
@@ -152,6 +153,19 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        <section className="bg-gray-50 py-20 px-6 text-center">
+        <h2 className="text-3xl font-bold mb-4">🚀 Nos projets Web3</h2>
+        <p className="text-gray-600 max-w-2xl mx-auto mb-6">
+          Découvrez comment nous utilisons la blockchain pour créer des solutions innovantes : NFT, DAO, dApps connectées...
+        </p>
+        <Link
+          href="/web3"
+          className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition"
+        >
+          Voir les projets Web3
+        </Link>
+      </section>
 
         {/* Testimonials */}
         <section className="px-8 py-20 bg-white">

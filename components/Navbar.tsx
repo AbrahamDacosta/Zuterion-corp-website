@@ -19,6 +19,7 @@ export default function Navbar() {
           <Link href="/services/tech" className="text-sm text-gray-700 hover:text-black">Services Tech</Link>
           <Link href="/services/marketing" className="text-sm text-gray-700 hover:text-black">Marketing Digital</Link>
           <Link href="/services/bonus" className="text-sm text-gray-700 hover:text-black">Bonus</Link>
+          <Link href="/web3">Web3</Link>
           <Link href="/contact" className="text-sm text-gray-700 hover:text-black">Contact</Link>
         </nav>
 
@@ -35,6 +36,7 @@ export default function Navbar() {
           <Link href="/services/tech" className="block text-sm text-gray-700 hover:text-black">Services Tech</Link>
           <Link href="/services/marketing" className="block text-sm text-gray-700 hover:text-black">Marketing Digital</Link>
           <Link href="/services/bonus" className="block text-sm text-gray-700 hover:text-black">Bonus</Link>
+          <Link href="/web3">Web3</Link>
           <Link href="/contact" className="block text-sm text-gray-700 hover:text-black">Contact</Link>
         </div>
       )}
