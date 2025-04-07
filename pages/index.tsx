@@ -196,7 +196,7 @@ export default function Home() {
             <Button className="text-md px-6 py-3">Discutons ensemble</Button>
           </motion.div>
         </section>
-
+        <NewsletterForm />  
         {/* Footer */}
         <footer className="w-full py-6 px-6 bg-gray-100 text-center text-sm text-gray-500">
           © {new Date().getFullYear()} Zuterion Corp. Tous droits réservés.
@@ -204,4 +204,4 @@ export default function Home() {
       </main></>
   );
 }
-<NewsletterForm />
+
