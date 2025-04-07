@@ -1,4 +1,7 @@
 import React from 'react';
+import NewsletterForm from '../components/NewsletterForm';
+
+
 
 export default function Footer() {
   return (
@@ -7,3 +10,4 @@ export default function Footer() {
     </footer>
   );
 }
+<NewsletterForm />

@@ -1,10 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '../components/ui/button';
+import { Card, CardContent } from '../components/ui/card';
 import { MoveRight ,Code2, LineChart, Puzzle} from 'lucide-react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
+import NewsletterForm from '../components/NewsletterForm';
+
+
 
 export default function Home() {
   return (
@@ -201,4 +204,4 @@ export default function Home() {
       </main></>
   );
 }
-
+<NewsletterForm />
