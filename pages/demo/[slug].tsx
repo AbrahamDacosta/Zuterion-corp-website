@@ -100,8 +100,24 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const project = web3Projects.find((proj) => proj.demoUrl === params?.demoUrl);
+  const project = web3Projects.find((p) => p.slug === params?.slug);
+
+  if (!project) {
+    return {
+      notFound: true,
+    };
+  }
+
+  // ⚠️ Supprimer `content` des props, car il est en ReactNode
+  const { content, ...serializableProject } = project;
+
   return {
-    props: { project }
+    props: {
+      project: {
+        ...serializableProject,
+        content: null, // ou undefined
+      },
+    },
   };
 };
+

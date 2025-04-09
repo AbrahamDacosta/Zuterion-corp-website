@@ -21,9 +21,10 @@ export default function ProjectCard({ title, description, stack,slug, demoLink, 
       transition={{ duration: 0.5 }}
       className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
     >
-      <div className="h-52 relative overflow-hidden">
+      <div className="h-72 md:h-80 lg:h-[350px] relative overflow-hidden">
         <Image src={image} alt={title} fill className="object-cover scale-100 hover:scale-105 transition-transform duration-500" />
-      </div>
+     </div>
+
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
