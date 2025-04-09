@@ -2,6 +2,8 @@ import Head from 'next/head';
 import ProjectCard from '../components/ProjectCard';
 import Link from 'next/link';
 import React from 'react';
+import { web3Projects } from '../data/web3-projects';
+
 
 const projects = [
   {

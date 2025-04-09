@@ -13,7 +13,7 @@ interface ProjectProps {
   image: string;
 }
 
-export default function ProjectCard({ title, description, stack,slug , image }: ProjectProps) {
+export default function ProjectCard({ title, description, stack,slug, demoLink, image }: ProjectProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
