@@ -99,5 +99,6 @@ export default function ContactQuickForm({ isOpen, onClose, projectName }: Conta
         </div>
       </div>
     </Dialog>
+    
   );
 }
