@@ -5,7 +5,10 @@
       "@/*": [
         "./*"
       ],
-      "typeRoots": ["./types", "./node_modules/@types"]
+      "typeRoots": [
+        "./types",
+        "./node_modules/@types"
+      ]
     },
     "allowJs": true,
     "skipLibCheck": true,
@@ -23,12 +26,19 @@
       "dom",
       "dom.iterable",
       "esnext"
-    ]
+    ],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

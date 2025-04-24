@@ -7,10 +7,31 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import NewsletterForm from '../components/NewsletterForm';
 import Link from 'next/dist/client/link';
+import { sanity } from '../lib/sanity';
+import { urlFor } from '@/lib/image'
+import SanityImage from '@/components/SanityImage'
+
+
+export async function getStaticProps() {
+ const posts = await sanity.fetch(`
+  *[_type == "post"] | order(publishedAt desc) {
+    _id,
+    title,
+    excerpt,
+    publishedAt,
+    slug { current },
+    category->{ title, slug { current } },
+    coverImage
+  }
+`)
+;
+
+  return { props: { posts } };
+}
 
 
 
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <><Head>
       <script
@@ -102,6 +123,8 @@ export default function Home() {
                 </ul>
               </div>
 
+              
+
               {/* Marketing Digital */}
               <div>
                 <div className="flex items-center gap-3 mb-2">
@@ -135,6 +158,40 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className="py-20 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-3xl font-bold">📰 Derniers articles du blog</h2>
+              <Link href="/blog" className="text-blue-600 text-sm font-medium hover:underline">
+                Voir tous les articles →
+              </Link>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {posts.map((post) => (
+                <Link key={post._id} href={`/blog/${post.slug.current}`} className="block p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+                  {post.coverImage && (
+                    <SanityImage
+                      image={post.coverImage}
+                      alt={post.title}
+                      width={600}
+                      height={300}
+                      className="rounded mb-3 h-40 w-full object-cover"
+                    />
+                  )}
+                  <h3 className="text-lg font-semibold">{post.title}</h3>
+                  <p className="text-sm text-gray-500 mb-1">
+                    {new Date(post.publishedAt).toLocaleDateString()}
+                  </p>
+                  <p className="text-sm text-gray-700">{post.excerpt}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+
+    
 
         {/* Portfolio */}
         <section className="px-8 py-20 bg-gray-100">
