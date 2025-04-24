@@ -65,4 +65,8 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
+  // Fac. : permet l'édition live même sans API token
+  studio: {
+    components: {},
+  },
 })
