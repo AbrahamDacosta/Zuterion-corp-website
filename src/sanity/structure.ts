@@ -1,10 +1,8 @@
-import { StructureBuilder } from 'sanity/structure';
-import { Iframe } from 'sanity-plugin-iframe-pane';
+import { Iframe } from 'sanity-plugin-iframe-pane'
 
-export const defaultDocumentNode = (
-  S: StructureBuilder,
-  { schemaType }: { schemaType: string }
-) => {
+// 👇 Pas besoin de StructureBuilder
+
+export const defaultDocumentNode = (S, { schemaType }) => {
   if (schemaType === 'post') {
     return S.document().views([
       S.view.form(),
@@ -21,9 +19,11 @@ export const defaultDocumentNode = (
         }),
     ]);
   }
+
   return S.document();
-};
-export const structure = (S: StructureBuilder) =>
+}
+
+export const structure = (S) =>
   S.list()
     .title('Contenu')
     .items([
