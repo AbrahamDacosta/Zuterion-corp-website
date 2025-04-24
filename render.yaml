@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: zuterioncorp
+    runtime: node # ✅ Obligatoire maintenant
+    buildCommand: yarn install && yarn build
+    startCommand: yarn start
+    plan: free
+    region: frankfurt
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+      # Mailchimp
+      - key: MAILCHIMP_API_KEY
+        value: 654b34a41ff699e4dd27ffa74efb50ab-us20
+      - key: MAILCHIMP_AUDIENCE_ID
+        value: e027e4209e
+      - key: MAILCHIMP_SERVER_PREFIX
+        value: us20
+
+      # Sanity - Côté client
+      - key: NEXT_PUBLIC_SANITY_PROJECT_ID
+        value: v83nmfic
+      - key: NEXT_PUBLIC_SANITY_DATASET
+        value: production
+
+      # Sanity - Côté serveur
+      - key: SANITY_PROJECT_ID
+        value: o35qtwx7
+      - key: SANITY_DATASET
+        value: production
+      - key: SANITY_TOKEN
+        value: skPoD3a3kpKl5BPjmcloqntJ7iXIcFVugVhPnFMdwqRv3z5YDV2kpl8Thsjkmpu8X9nNo1XuWDlsum8MnSfOTejo46zXFRbb4Y0x6auxRWhBeQgW8SJ8lI8va3rn2HhHR9Y4fqimrMJenL7bkk2AalYDrnHxPlZRxy67nYAi3MhisIXKJFh1

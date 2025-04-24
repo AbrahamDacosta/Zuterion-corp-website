@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import React from 'react';
 import Head from 'next/head';
+import Script from 'next/script';
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -58,7 +59,15 @@ export default function App({ Component, pageProps }: AppProps) {
     <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=642888295335656&ev=PageView&noscript=1" />
   </noscript>
         {/* Google Analytics GA4 */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQD2WCR8EF"></script>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXX" strategy="afterInteractive" />
+    <Script id="gtag-init" strategy="afterInteractive">
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXX');
+      `}
+    </Script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
