@@ -34,7 +34,7 @@
     "rehype-highlight": "^7.0.2",
     "remark-gfm": "^4.0.1",
     "sanity": "3.21.0",
-    "sanity-plugin-iframe-pane": "^3.2.1",
+    "sanity-plugin-iframe-pane": "2.6.1",
     "sanity-plugin-markdown": "^5.1.0",
     "sharp": "^0.33.5",
     "styled-components": "^6.1.17",
