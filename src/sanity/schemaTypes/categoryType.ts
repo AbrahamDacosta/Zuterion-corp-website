@@ -1,26 +1,26 @@
-import {TagIcon} from '@sanity/icons'
-import {defineField, defineType} from 'sanity'
+import { defineType, defineField } from 'sanity'
+import { TagIcon } from '@sanity/icons'
+import type { ComponentType } from 'react'
 
-export const categoryType = defineType({
+export default defineType({
   name: 'category',
-  title: 'Category',
+  title: 'Catégorie',
   type: 'document',
-  icon: TagIcon,
+  icon: TagIcon as any, // ✅ SOLUTION STABLE
   fields: [
     defineField({
       name: 'title',
+      title: 'Nom',
       type: 'string',
     }),
     defineField({
       name: 'slug',
+      title: 'Slug',
       type: 'slug',
       options: {
         source: 'title',
+        maxLength: 96,
       },
-    }),
-    defineField({
-      name: 'description',
-      type: 'text',
     }),
   ],
 })

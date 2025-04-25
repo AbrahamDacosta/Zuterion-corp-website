@@ -46,5 +46,10 @@
     "eslint": "8.49.0",
     "eslint-config-next": "14.1.0",
     "typescript": "5.2.2"
+  },
+  "resolutions": {
+    "@sanity/*/@types/react": "^18.2.0",
+    "**/@types/react": "^18.2.0"
   }
+  
 }
