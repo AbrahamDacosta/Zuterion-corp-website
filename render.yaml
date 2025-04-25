@@ -31,4 +31,4 @@ services:
       - key: SANITY_DATASET
         value: production
       - key: SANITY_TOKEN
-        value: skPoD3a3kpKl5BPjmcloqntJ7iXIcFVugVhPnFMdwqRv3z5YDV2kpl8Thsjkmpu8X9nNo1XuWDlsum8MnSfOTejo46zXFRbb4Y0x6auxRWhBeQgW8SJ8lI8va3rn2HhHR9Y4fqimrMJenL7bkk2AalYDrnHxPlZRxy67nYAi3MhisIXKJFh1
+        value: skciflNPBvaSobdLJth9tNlcnUFkjobjlOQKFwfRXVGgtAfHbaO2IZOBMy8xCluWU1n6nwYHSYR8QDNk0svd8b0F53FqeIB9VkelEBUNZeqwieGR4bil1D5J3epYJubRnKMuhB9W9utPRBxjBR8mqYD8UIe2DP2OE8FyDSc0g9GaJFFVB1GL
