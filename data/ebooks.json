@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "title": "Créer un site Web de A à Z",
+      "slug": "site-web-de-a-a-z",
+      "price": 6000,
+      "cover": "/covers/page_de_couverture_ebook_zuterion.png",
+      "description": "Apprends à créer ton propre site web sans coder."
+    },
+    {
+      "id": 2,
+      "title": "Lancer son app mobile",
+      "slug": "app-mobile",
+      "price": 14900,
+      "cover": "/covers/app_mobile_zuterion.png",
+      "description": "Développe ton application iOS/Android avec Flutter."
+    },
+    {
+      "id": 3,
+      "title": "UX/UI Design : Maîtriser les Bases",
+      "slug": "ux-ui-design",
+      "price": 7900,
+      "cover": "/covers/ui_ux_design_zuterion.png",
+      "description": "Apprends à concevoir des interfaces modernes et efficaces."
+    }
+  ]
+  
